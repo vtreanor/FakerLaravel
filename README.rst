@@ -41,18 +41,19 @@ The structure is further explored below
   </div>
   
 The package structure is as follows
-  ──packages
-    └──osirl
-       └──pets
-          └──src
+
+──packages
+  └──osirl
+     └──pets
+        └──src
 
 The package namespace is Osirl.Pets as shown below from the composer.json file
 
 .. code-block::
 
-"autoload": {
-  "psr-4": {
-      "App\\": "app/",
-      "Osirl\\Pets\\": "packages/osirl/pets/src"
-  },
+  "autoload": {
+    "psr-4": {
+        "App\\": "app/",
+        "Osirl\\Pets\\": "packages/osirl/pets/src"
+    },
   
