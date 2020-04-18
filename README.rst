@@ -25,9 +25,17 @@ Laravel package relating to pets. These details are made available in new provid
 
 .. code-block:: php
 
+  //This snippet goes to the very beginning of the web page
   <?php
     $faker = new Faker\Generator();
     $provider = new Osirl\Pets\Providers\PetsFakerServiceProvider($faker);
     $faker->addProvider($provider);
   ?>
+  
+  <!-- This next snippet is an excerpt from the web page showing how to use the nre Faker provider -->
+  <div class="form-group ">
+    {{ Form::text('name', $faker->dogName, ['class' => 'form-control', 'placeholder' => 'Name']) }}
+    {{ $errors->first('name','<span class="help-block">:message</span>') }}
+  </div>
+  
   
