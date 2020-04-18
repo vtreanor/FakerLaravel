@@ -23,7 +23,7 @@ Laravel package relating to pets. These details are made available in new provid
     }
 
 
-.. code-block::
+.. code-block:: html
 
   <?php
     $faker = new Faker\Generator();
