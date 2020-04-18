@@ -7,7 +7,8 @@ Laravel package relating to pets. These details are made available in new provid
 .. code-block:: php
   :caption: Service Provider
   :name: PetsFakerServiceProvider
-  ?php
+  
+  <?php
     namespace Osirl\Pets\Providers;
     class PetsFakerServiceProvider extends \Faker\Provider\Base {
       protected static $dogNames = ['Rover', 'Spot','Fido', 'Butch'];
