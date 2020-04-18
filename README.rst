@@ -24,17 +24,18 @@ The structure is further explored below
       public static function dogDescription(){return static::randomElement(static::$dogDescriptions);}
     }
 
+To use the extended Faker functionality, it must be made available to the web page. To do this, add the following to the routes file
 
 .. code-block:: php
 
-  //This snippet goes to the very beginning of the web page
-  <?php
+  Route::get('create',  function(){
     $faker = new Faker\Generator();
     $provider = new Osirl\Pets\Providers\PetsFakerServiceProvider($faker);
     $faker->addProvider($provider);
-  ?>
-  
-  <!-- This next snippet is an excerpt from the same web page showing how to use the new Faker provider -->
+    return view('pets::dogs.create',['faker' => $faker]);
+  });
+
+  <!-- This next snippet is an excerpt from the web page showing how to use the new Faker provider -->
   <div class="form-group ">
     {{ Form::text('name', $faker->dogName, ['class' => 'form-control', 'placeholder' => 'Name']) }}
     {{ $errors->first('name','<span class="help-block">:message</span>') }}
