@@ -55,10 +55,4 @@ The package namespace is Osirl.Pets as shown below from the composer.json file
       "App\\": "app/",
       "Osirl\\Pets\\": "packages/osirl/pets/src"
   },
-  .....
-
-
-  
-
-  
   
