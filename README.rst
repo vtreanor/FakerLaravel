@@ -5,8 +5,6 @@ For testing purposes I needed to extend Fzaninotto/Faker to provide random detai
 Laravel package relating to pets. These details are made available in new provider PetsFakerServiceProvider.
 
 .. code-block:: php
-  :caption: Service Provider
-  :name: PetsFakerServiceProvider
   
   <?php
     namespace Osirl\Pets\Providers;
