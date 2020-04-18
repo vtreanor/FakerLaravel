@@ -42,10 +42,12 @@ The structure is further explored below
   
 The package structure is as follows
 
-──packages
-  └──osirl
-     └──pets
-        └──src
+.. code-block::
+
+  ──packages
+    └──osirl
+       └──pets
+          └──src
 
 The package namespace is Osirl.Pets as shown below from the composer.json file
 
