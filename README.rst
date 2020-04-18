@@ -49,7 +49,7 @@ The package structure is as follows
        └──pets
           └──src
 
-The package namespace is Osirl.Pets as shown below from the composer.json file
+The package namespace is Osirl\Pets as shown below from the composer.json file
 
 .. code-block::
 
