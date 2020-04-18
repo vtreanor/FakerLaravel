@@ -2,7 +2,9 @@ Using New Faker Provider in Laravel Package Development
 =======================================================
 
 For testing purposes I needed to extend Fzaninotto/Faker to provide random details for use in a new
-Laravel package relating to pets. These details are made available in new provider PetsFakerServiceProvider.
+Laravel package relating to pets. These details are made available in new provider PetsFakerServiceProvider. This provider
+is located in package Osirl\Pets which resolves to /packages/osirl/pets/src/Providers/PetsFakerServiceProvider.php
+The structure is further explored below
 
 .. code-block:: php
   
@@ -37,5 +39,26 @@ Laravel package relating to pets. These details are made available in new provid
     {{ Form::text('name', $faker->dogName, ['class' => 'form-control', 'placeholder' => 'Name']) }}
     {{ $errors->first('name','<span class="help-block">:message</span>') }}
   </div>
+  
+The package structure is as follows
+  ──packages
+    └──osirl
+       └──pets
+          └──src
+
+The package namespace is Osirl.Pets as shown below from the composer.json file
+
+.. code-block::
+
+"autoload": {
+  "psr-4": {
+      "App\\": "app/",
+      "Osirl\\Pets\\": "packages/osirl/pets/src"
+  },
+  .....
+
+
+  
+
   
   
